@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>World Var bookmarklet demo</title>
+	<meta name="author" content="Tom Granger">
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+	<h1>World Var !!</h1>
+	<h4>Demo <a href="http://en.wikipedia.org/wiki/Bookmarklet" title="dunno what a bookmarklet is?">Bookmarklet</a></h4>
+	<p>Drag this button to your bookmarks, and click on the bookmark whenever you want to dump the non-standard JS globals of current page to the console <a class="btn btn-large" href='javascript:(function(){var a=document.createElement("iframe"),c={},d=0,e=window.console?console.log:alert;a.setAttribute("style","display:none");document.body.appendChild(a);var f=a.contentWindow?a.contentWindow:a.contentDocument.document,b;for(b in window)"undefined"===typeof f[b]&&(c[b]=window[b],d++);a.parentNode.removeChild(a);e("Found "+d+" custom object(s)");e(c)})();'>World Var</a></p>
+	</div>
+</body>
+</html>
