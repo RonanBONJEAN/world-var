@@ -7,7 +7,7 @@
     document.body.appendChild(ifrm);
     var ifrw = (ifrm.contentWindow) ? ifrm.contentWindow : (ifrm.contentDocument.document);
     for(var prop in window) {
-        if(!ifrw.hasOwnProperty(prop)) {
+        if(typeof(ifrw[prop]) === "undefined") {
            rest[prop] = window[prop];
            cnt++;
         }
